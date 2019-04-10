@@ -1,13 +1,13 @@
 {
-  "main.css": "/static/css/main.22bd18cf.chunk.css",
-  "main.js": "/static/js/main.36535b94.chunk.js",
-  "main.js.map": "/static/js/main.36535b94.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.fdfcfda2.js",
-  "runtime~main.js.map": "/static/js/runtime~main.fdfcfda2.js.map",
-  "static/js/2.3f31533f.chunk.js": "/static/js/2.3f31533f.chunk.js",
-  "static/js/2.3f31533f.chunk.js.map": "/static/js/2.3f31533f.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.a838c44adbf007d3455408b1d6ca57fc.js": "/precache-manifest.a838c44adbf007d3455408b1d6ca57fc.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/main.22bd18cf.chunk.css.map": "/static/css/main.22bd18cf.chunk.css.map"
+  "main.css": "/sequencing-actions-explicitly/static/css/main.22bd18cf.chunk.css",
+  "main.js": "/sequencing-actions-explicitly/static/js/main.49cb5376.chunk.js",
+  "main.js.map": "/sequencing-actions-explicitly/static/js/main.49cb5376.chunk.js.map",
+  "runtime~main.js": "/sequencing-actions-explicitly/static/js/runtime~main.bdc427b6.js",
+  "runtime~main.js.map": "/sequencing-actions-explicitly/static/js/runtime~main.bdc427b6.js.map",
+  "static/js/2.3f31533f.chunk.js": "/sequencing-actions-explicitly/static/js/2.3f31533f.chunk.js",
+  "static/js/2.3f31533f.chunk.js.map": "/sequencing-actions-explicitly/static/js/2.3f31533f.chunk.js.map",
+  "index.html": "/sequencing-actions-explicitly/index.html",
+  "precache-manifest.5b97f84a849d4198c16e9351db875221.js": "/sequencing-actions-explicitly/precache-manifest.5b97f84a849d4198c16e9351db875221.js",
+  "service-worker.js": "/sequencing-actions-explicitly/service-worker.js",
+  "static/css/main.22bd18cf.chunk.css.map": "/sequencing-actions-explicitly/static/css/main.22bd18cf.chunk.css.map"
 }
