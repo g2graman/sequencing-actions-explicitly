@@ -6,11 +6,11 @@ import { finalStandardCode, finalSomeEpicsCode } from "./snippets";
 const codeSamples = [{
     title: 'SomeComponent (Final)',
     code: finalStandardCode,
-    lang: 'ts'
+    lang: 'js'
 }, {
     title: 'SomeEpics (Final)',
     code: finalSomeEpicsCode,
-    lang: 'ts'
+    lang: 'js'
 }];
 
 export const FinalStandardSlide = () => (

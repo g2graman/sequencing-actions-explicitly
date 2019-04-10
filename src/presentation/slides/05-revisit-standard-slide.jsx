@@ -6,11 +6,11 @@ import { standardCode, someEpicsSideEffect } from "./snippets";
 const codeSamples = [{
     title: 'SomeComponent',
     code: standardCode,
-    lang: 'ts'
+    lang: 'js'
 }, {
     title: 'SomeEpics (with navigation side-effect)',
     code: someEpicsSideEffect,
-    lang: 'ts'
+    lang: 'js'
 }];
 
 export const RevisitStandardSlide = () => (

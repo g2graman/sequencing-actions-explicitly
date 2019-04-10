@@ -15,7 +15,7 @@ export const StandardEquivalenceSlide = props => (
         </Heading>
         <Appear>
             <div>
-                <CodePane style={{ paddingTop: '25px' }} source={simpleSequenceDispatchingCode} lang='ts' textSize='calc(12px + 6 * ((100vw - 320px) / 680))' />
+                <CodePane style={{ paddingTop: '25px' }} source={simpleSequenceDispatchingCode} lang='js' textSize='calc(12px + 6 * ((100vw - 320px) / 680))' />
             </div>
         </Appear>
         <Appear>
