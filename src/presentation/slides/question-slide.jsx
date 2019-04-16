@@ -14,3 +14,5 @@ export const QuestionSlide = props => (
         </Heading>
     </Slide>
 );
+
+export default QuestionSlide;

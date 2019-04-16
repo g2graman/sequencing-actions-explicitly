@@ -43,32 +43,6 @@ export const someServiceCode = `    import { Injectable } from '@angular/core';
     }
 `;
 
-export const someEpicsOriginal = `    import { Injectable } from '@angular/core';
-    import { Epic } from 'redux-observable-decorator';
-    import { ActionsObservable } from 'redux-observable';
-    import { Action } from 'redux';
-
-
-    @Injectable()
-    class SomeEpics {
-         @Epic()
-         reactToAction1 = (action$: ActionsObservable<Action>) => (
-            action$.ofType('ACTION_ONE')
-                // ...
-        )
-        
-        reactToAction2 = (action$: ActionsObservable<Action>) => (
-            action$.ofType('ACTION_TWO')
-                // ...
-        )
-        
-        reactToAction3 = (action$: ActionsObservable<Action>) => (
-            action$.ofType('ACTION_THREE')
-                // ...
-        )
-    }
-`;
-
 export const someEpicsSideEffect = `    import { Injectable } from '@angular/core';
     import { Router } from '@angular/router';
     import { Epic } from 'redux-observable-decorator';
@@ -87,6 +61,7 @@ export const someEpicsSideEffect = `    import { Injectable } from '@angular/cor
          reactToAction1 = (action$: ActionsObservable<Action>) => (
             action$.ofType('ACTION_ONE')
                 .pipe(
+                    // navigation side-effect
                     tap(() => this.router.navigateByUrl('/somePath'))
                 )
          )

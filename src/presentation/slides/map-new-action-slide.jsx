@@ -11,7 +11,7 @@ export const MapNewActionSlide = props => (
             textColor="secondary"
             lineHeight={1.2}
         >
-            <S type='italic'>redux-observable</S> allows us to <S type='italic'>map</S> to another action in an Epic, to sequence the two actions
+            Idea: <S type='italic'>redux-observable</S> allows us to <S type='italic'>map</S> to another action in an Epic, to sequence the two actions
         </Heading>
         <Appear>
             <div>
@@ -20,3 +20,5 @@ export const MapNewActionSlide = props => (
         </Appear>
     </Slide>
 );
+
+export default MapNewActionSlide;

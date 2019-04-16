@@ -16,3 +16,5 @@ const codeSamples = [{
 export const FinalStandardSlide = () => (
     <CodeCompareSlide samples={codeSamples} textSize={'0.9vw'} wide={true}/>
 );
+
+export default FinalStandardSlide;

@@ -8,11 +8,13 @@ const codeSamples = [{
     code: standardCode,
     lang: 'js'
 }, {
-    title: 'SomeEpics (with navigation side-effect)',
+    title: 'SomeEpics',
     code: someEpicsSideEffect,
     lang: 'js'
 }];
 
-export const RevisitStandardSlide = () => (
+export const InferStandardSlide = () => (
     <CodeCompareSlide samples={codeSamples} textSize={'0.9vw'} wide={true}/>
 );
+
+export default InferStandardSlide;

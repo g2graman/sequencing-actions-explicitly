@@ -13,3 +13,5 @@ export const IntroSlide = props => (
         </Heading>
     </Slide>
 );
+
+export default IntroSlide;

@@ -14,8 +14,10 @@ export const ProblemSetupSlide = props => (
         </Heading>
         <Appear>
             <div>
-                <Text style={{ paddingTop: '50px' }} textColor="secondary">It's doable but we would have to be really careful. We can make things a bit easier with a pattern.</Text>
+                <Text style={{ paddingTop: '50px' }} textColor="secondary" textAlign={'left'}>It might be possible but we would have to be really careful. We can make things a bit easier with a pattern.</Text>
             </div>
         </Appear>
     </Slide>
 );
+
+export default ProblemSetupSlide;

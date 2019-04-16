@@ -11,7 +11,7 @@ export const StandardEquivalenceSlide = props => (
             textColor="secondary"
             lineHeight={1.2}
         >
-            That last snippet is <S type='italic'>nearly</S> equivalent to what we had in the component code of the "standard"
+            That last snippet is <S type='italic'>nearly</S> equivalent to what we had in the component code of the original
         </Heading>
         <Appear>
             <div>
@@ -20,8 +20,10 @@ export const StandardEquivalenceSlide = props => (
         </Appear>
         <Appear>
             <div>
-                <Text style={{ paddingTop: '50px' }} textColor="secondary">This falls short in sequencing side-effects</Text>
+                <Text textAlign={'left'} style={{ paddingTop: '50px' }} textColor="secondary">The original falls short in sequencing side-effects</Text>
             </div>
         </Appear>
     </Slide>
 );
+
+export default StandardEquivalenceSlide;
