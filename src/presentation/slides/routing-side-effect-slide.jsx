@@ -1,26 +1,25 @@
 import * as React from "react";
-import {Slide, CodePane, Appear, Text, Code, Heading} from "spectacle";
+import { Slide, Appear } from "spectacle";
 
 import { simpleSequenceHandlingNavigationCode } from "./snippets";
+import { Code, Heading, Text } from "../../shared/components/primitives";
+import { CodePane } from "../../shared/components/code-pane.component";
 
 export const RoutingSideEffectSlide = props => (
     <Slide {...props}>
         <Heading
             size={5}
-            textAlign="left"
-            textColor="secondary"
-            lineHeight={1.2}
         >
             What if we wanted to do something only after we finished navigating?
         </Heading>
         <Appear>
             <div>
-                <Text textAlign={'left'} style={{ paddingTop: '50px' }} textColor="secondary">We got close in a previous snippet, but we didn't handle the promise returned by <Code textColor={'#9a86fd'}>navigateByUrl</Code> </Text>
+                <Text style={{ paddingTop: '25px' }}>We got close in a previous snippet, but we didn't handle the promise returned by <Code textColor={'#9a86fd'}>navigateByUrl</Code> </Text>
             </div>
         </Appear>
         <Appear>
             <div>
-                <CodePane style={{ paddingTop: '25px' }} source={simpleSequenceHandlingNavigationCode} lang='js' textSize='1.25vw' />
+                <CodePane style={{ paddingTop: '25px' }} source={simpleSequenceHandlingNavigationCode} lang='js' f={3} />
             </div>
         </Appear>
     </Slide>

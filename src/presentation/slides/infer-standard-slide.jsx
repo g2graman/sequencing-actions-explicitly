@@ -14,7 +14,7 @@ const codeSamples = [{
 }];
 
 export const InferStandardSlide = () => (
-    <CodeCompareSlide samples={codeSamples} textSize={'0.9vw'} wide={true}/>
+    <CodeCompareSlide samples={codeSamples} wide={true}/>
 );
 
 export default InferStandardSlide;

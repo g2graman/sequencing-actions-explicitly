@@ -14,3 +14,5 @@ export const colors = {
     tertiary: 'white',
     yellow: '#FFEB3B',
 };
+
+export default colors;

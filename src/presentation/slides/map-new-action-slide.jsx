@@ -1,21 +1,20 @@
 import * as React from "react";
-import { Heading, Slide, CodePane, Appear, S } from "spectacle";
+import { Slide, Appear } from "spectacle";
 
 import { simpleSequenceCode } from "./snippets";
+import { Heading, S } from "../../shared/components/primitives";
+import { CodePane } from "../../shared/components/code-pane.component";
 
 export const MapNewActionSlide = props => (
     <Slide {...props}>
         <Heading
-            size={5}
-            textAlign="left"
-            textColor="secondary"
-            lineHeight={1.2}
+            size={6}
         >
             Idea: <S type='italic'>redux-observable</S> allows us to <S type='italic'>map</S> to another action in an Epic, to sequence the two actions
         </Heading>
         <Appear>
             <div>
-                <CodePane style={{ paddingTop: '25px' }} source={simpleSequenceCode} lang='js' textSize='calc(12px + 6 * ((100vw - 320px) / 680))' />
+                <CodePane style={{ paddingTop: '25px' }} source={simpleSequenceCode} lang='js' f={3} />
             </div>
         </Appear>
     </Slide>
