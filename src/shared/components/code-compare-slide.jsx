@@ -1,23 +1,11 @@
 import * as React from "react";
-// import { Text } from "spectacle";
 
 import { CodePaneTitle } from "./primitives";
 import { ScrollingSlide } from "./scrolling-slide.component";
 import { CodePane } from "./code-pane.component";
 import { CodeCompare } from "./code-compare.component";
 
-export type CodeSample = {
-    title: string;
-    code: string;
-    lang: string;
-};
-
-export type CodeCompareSlideProps = {
-    samples: CodeSample[],
-    wide: boolean;
-};
-
-export const CodeCompareSlide: React.FunctionComponent<CodeCompareSlideProps> = ({
+export const CodeCompareSlide = ({
      samples: codeSamples,
      wide=true
 }) => (

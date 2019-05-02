@@ -80,12 +80,25 @@ export const someEpicsSideEffect = `    import { Injectable } from '@angular/cor
     }
 `;
 
+export const simpleSequenceUsingPayloadCode = `    @Epic()
+    reactToAction1 = (action$: ActionsObservable<Action>) => (
+       action$.ofType('ACTION_ONE')
+           .pipe(
+               tap(() => this.router.navigateByUrl('/somePath')),
+               map((actionOne) => ({
+                 type: 'ACTION_TWO',
+                 payload: actionOne.payload.something
+               }))
+           )
+    )
+`;
+
 export const simpleSequenceCode = `    @Epic()
     reactToAction1 = (action$: ActionsObservable<Action>) => (
        action$.ofType('ACTION_ONE')
            .pipe(
                tap(() => this.router.navigateByUrl('/somePath')),
-               mapTo({ type: 'ACTION_TWO' })
+               map(() => ({ type: 'ACTION_TWO' }))
            )
     )
 `;
@@ -100,6 +113,19 @@ export const simpleSequenceHandlingNavigationCode = `    @Epic()
            .pipe(
                mergeMap(() => this.router.navigateByUrl('/somePath')),
                mapTo({ type: 'ACTION_TWO' })
+           )
+    )
+`;
+
+export const simpleSequenceManyHandlingNavigationCode = `    @Epic()
+    reactToAction1 = (action$: ActionsObservable<Action>) => (
+       action$.ofType('ACTION_ONE')
+           .pipe(
+               mergeMap(() => this.router.navigateByUrl('/somePath')),
+               mergeMap(() => [
+                 { type: 'ACTION_TWO' },
+                 { type: 'ACTION_THREE' }
+               ])
            )
     )
 `;

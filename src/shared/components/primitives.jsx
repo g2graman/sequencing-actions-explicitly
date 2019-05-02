@@ -1,8 +1,6 @@
-import React from 'react';
 import * as Spectacle from 'spectacle';
 import styled from '@emotion/styled';
 import { compose, defaultProps, withProps } from 'recompose';
-import { omit } from "ramda";
 
 import theme from "../theme";
 const [{ withType }, { colors} ] = [theme.helpers, theme.colors];
@@ -51,23 +49,15 @@ export const List = styled(Spectacle.List)`
   list-style: none;
 
   & li:before {
-    content: ${props => (props.marker ? `'${props.marker} '` : '"— "')};
+    content: ${props => (typeof props.marker !== 'undefined' ? `'${props.marker} '` : '"— "')};
     font-weight: 500;
   }`;
-
-export const OrderedList = withProps({
-    ordered: true,
-})(Spectacle.List);
-
-export const UnorderedList = withProps({
-    ordered: false,
-})(Spectacle.List);
 
 export const ListItem = compose(
     defaultProps({
         ...defaultTypeProps,
         fw: 4,
-        style:{ paddingLeft: '50px' }
+        style: { paddingLeft: '50px' }
     }),
     withType,
 )(Spectacle.ListItem);
@@ -77,16 +67,23 @@ export const S = compose(
     withType,
 )(Spectacle.S);
 
+export const Quote = compose(
+    defaultProps(defaultTypeProps),
+    withType,
+)(Spectacle.Quote);
+
 export const Code = compose(
     defaultProps(defaultTypeProps),
     withType,
 )(Spectacle.Code);
 
-export const Emoji = ({ ...props }) => (
-    <span role="img" aria-hidden="true" { ...omit(['children'], props) }>
-        { props.children }
-    </span>
-);
+export const Slide = styled(Spectacle.Slide)`
+    ${({wide}) => wide && `
+     &.spectacle-content {
+            max-width: unset !important;
+            padding: 0 75px !important;
+     }`}
+`;
 
 export const CodePaneTitle = compose(
     defaultProps({

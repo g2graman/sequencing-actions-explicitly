@@ -1,7 +1,5 @@
 import * as React from "react";
-import { Slide } from "spectacle";
-
-import { Heading, S } from "../../shared/components/primitives";
+import { Heading, S, Slide } from "../../shared/components/primitives";
 
 export const IntroSlide = props => (
     <Slide {...props}>

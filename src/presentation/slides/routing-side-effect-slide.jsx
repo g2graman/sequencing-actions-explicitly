@@ -1,8 +1,8 @@
 import * as React from "react";
-import { Slide, Appear } from "spectacle";
+import { Appear } from "spectacle";
 
 import { simpleSequenceHandlingNavigationCode } from "./snippets";
-import { Code, Heading, Text } from "../../shared/components/primitives";
+import { Slide, Code, Heading, Text } from "../../shared/components/primitives";
 import { CodePane } from "../../shared/components/code-pane.component";
 
 export const RoutingSideEffectSlide = props => (
@@ -14,12 +14,13 @@ export const RoutingSideEffectSlide = props => (
         </Heading>
         <Appear>
             <div>
-                <Text style={{ paddingTop: '25px' }}>We got close in a previous snippet, but we didn't handle the promise returned by <Code textColor={'#9a86fd'}>navigateByUrl</Code> </Text>
+                <Text f={2} style={{ paddingTop: '25px' }}>We got close in a previous snippet, but we didn't handle the promise returned by <Code f={2} textColor={'#9a86fd'}>navigateByUrl</Code></Text>
             </div>
         </Appear>
         <Appear>
             <div>
-                <CodePane style={{ paddingTop: '25px' }} source={simpleSequenceHandlingNavigationCode} lang='js' f={3} />
+                <Text style={{ paddingTop: '25px' }} f={2}>Note the <Code f={2} textColor={'#9a86fd'}>mergeMap</Code> below</Text>
+                <CodePane source={simpleSequenceHandlingNavigationCode} lang='js' f={3} />
             </div>
         </Appear>
     </Slide>

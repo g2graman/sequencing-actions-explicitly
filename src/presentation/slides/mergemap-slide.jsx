@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Appear, Slide } from "spectacle";
+import { Appear } from "spectacle";
 
-import { Code, S, Text } from "../../shared/components/primitives";
+import { Code, S, Text, Slide } from "../../shared/components/primitives";
 
 export const MergeMapSlide = props => (
     <Slide {...props}>

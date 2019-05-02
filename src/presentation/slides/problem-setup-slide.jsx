@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Slide, Appear } from "spectacle";
+import { Appear } from "spectacle";
 
-import { Code, Heading, Text } from "../../shared/components/primitives";
+import { Code, Heading, Text, Slide } from "../../shared/components/primitives";
 
 export const ProblemSetupSlide = props => (
     <Slide {...props}>

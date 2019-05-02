@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Slide, Appear } from "spectacle";
 
-import { Heading, Emoji, Text, Code, S } from "../../shared/components/primitives";
+import { Heading, Text, S } from "../../shared/components/primitives";
 
 export const ErrorExplanationSlide = props => (
     <Slide {...props}>
@@ -13,22 +13,27 @@ export const ErrorExplanationSlide = props => (
         </Heading>
         <Appear>
             <div>
-                <Text f={2} style={{ paddingTop: '25px' }}>Let's try and reason about this <S type='italic'>loosely</S></Text>
+                <Text f={3} style={{ paddingTop: '25px' }}>Let's try and reason about this <S type='italic'>loosely</S></Text>
             </div>
         </Appear>
         <Appear>
             <div>
-                <Text f={2} style={{ paddingTop: '25px' }}>Since the completion of navigation before handling <Code f={2} textColor={'#ffcc99'}>'ACTION_TWO'</Code> isn't guaranteed, <Code f={2} textColor={'#ffcc99'}>'ACTION_TWO'</Code> gets dispatched and handled during the render cycle of the root component that is focused on dealing with its router outlet</Text>
+                <Text f={3} style={{ paddingTop: '25px' }}>The second action (the one that triggers the update of the view) gets dispatched before navigation completes</Text>
             </div>
         </Appear>
         <Appear>
             <div>
-                <Text f={2} style={{ paddingTop: '25px' }}>When the processing of <Code f={2} textColor={'#ffcc99'}>'ACTION_TWO'</Code> triggers the need for a render, the root component <S type='italic'>wasn't anticipating this kind of change</S></Text>
+                <Text f={3} style={{ paddingTop: '25px' }}>At this point, the root component is focused on dealing with its router outlet, and waiting for navigation to complete so the contents of the outlet can be updated</Text>
             </div>
         </Appear>
         <Appear>
             <div>
-                <Text f={2} textAlign='center' style={{ paddingTop: '25px' }}><Emoji aria-label='boom'>💥💥💥</Emoji></Text>
+                <Text f={3} style={{ paddingTop: '25px' }}>When the processing of the second action triggers the need for a render, the root component <S type='italic'>wasn't anticipating this kind of change, because navigation hadn't completed yet</S></Text>
+            </div>
+        </Appear>
+        <Appear>
+            <div>
+                <Text f={3} textAlign='center' style={{ paddingTop: '25px' }}><span role='img' aria-label='boom'>💥💥💥</span></Text>
             </div>
         </Appear>
     </Slide>
